@@ -1,0 +1,9 @@
+@import "../variables";
+
+.design{
+  @include contain;
+
+  a{
+    color: $base-accent;
+  }
+}

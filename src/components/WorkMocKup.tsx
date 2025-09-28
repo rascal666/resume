@@ -4,12 +4,12 @@ import React from "react";
 type typeProps = {
     img: any;
     link: string;
-    design: string;
+    git?: string;
     target: string;
     description?: string
 }
 
-const WorkMocKup = ({img, link, design, target, description}: typeProps) => {
+const WorkMocKup = ({img, link, git,  target, description}: typeProps) => {
 
     function animaRotate (e:React.MouseEvent<HTMLSpanElement, MouseEvent>) {
         let element = e.currentTarget.style
@@ -31,9 +31,9 @@ const WorkMocKup = ({img, link, design, target, description}: typeProps) => {
                 }} src={img} alt="" />
             </a>
             <div className="WorkMocKup__text">
-                <p><b>Дизайн</b> - {design}</p>
                 <p><b>Цель</b> - {target}</p>
                 <p>{description}</p>
+                { git ?  <b><a href={git} target='_blank' >ссылка на гит</a></b> : null}
             </div>
 
         </div>

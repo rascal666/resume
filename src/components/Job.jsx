@@ -1,21 +1,52 @@
 import React from 'react';
 import '../styles/components/job.scss'
+import Accordion from "../ux-ui/accordion/accordion";
 
 const Job = () => {
+
+    const jsonWork = [
+        {
+            title: 'Сентябрь 2019 — июнь 2022 - Абак-Пресс, медиахолдинг',
+            Responsibilities: [
+                'Верстка посадочных страниц (с добавление библиотек и какой либо динамики)',
+                'Дизайн макетов',
+            ]
+        },
+        {
+            title: 'Июль 2022 — сентябрь 2022г - Сайтсофт',
+            Responsibilities: [
+                'Работа с асинхронными запросами, взаимодействие с бекендом',
+                'поддержание кода на jqery',
+                'разработка на vue',
+            ]
+        },
+        {
+            title: 'Июль 2024 — сентябрь 2024г - Lidera',
+            Responsibilities: [
+                'редактрование посадочных страниц',
+                'дизайн внутреннего сайта',
+            ]
+        }
+    ]
+
     return (
        <div className='job'>
-           <div className='job__item'>
-               <div className='job__title'>Сентябрь 2019 — июнь 2022 - Абак-Пресс, медиахолдинг</div>
-               <div className='job__subtitle'>Обязанности:</div>
-               <div className='job__subtitle'>-  Верстка посадочных страниц (с добавление библиотек и какой либо динамики);</div>
-               <div className='job__subtitle'>-  Дизайн макетов;</div>
-               <div className='job__subtitle'>-  Верстка и отправка писем;</div>
-           </div>
-           <div className='job__item'>
-               <div className='job__title'>Июль 2022 — сентябрь 2022г - Сайтсофт</div>
-               <div className='job__subtitle'>Обязанности:</div>
-               <div className='job__subtitle'>-  Работа с асинхронными запросами, взаимодействие с бекендом;</div>
-           </div>
+           {
+               jsonWork.map((item, index) => (
+                   <Accordion key={index} text={item.title}>
+                       <div className='job__item'>
+                           <div className='job__subtitle'>Обязанности:</div>
+                           {
+                               item.Responsibilities.map((Responsibilities, index) => (
+                                   <div key={index} className='job__subtitle'>- {Responsibilities}</div>
+                               ))
+                           }
+                       </div>
+                   </Accordion>
+               ))
+           }
+
+
        </div>
     );
 };

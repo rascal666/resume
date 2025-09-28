@@ -14,11 +14,20 @@
 
   &__mookAp{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 64px;
+
+    @media ($media-tablet) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media ($media-mobile) {
+      grid-template-columns: 1fr ;
+    }
 
     a {
       perspective: 800px;
+      color: $base-accent;
 
     }
 

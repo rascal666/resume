@@ -3,12 +3,12 @@
 
 .job{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
-  grid-gap: $indent-medium;
- 
-  @media ($media-tablet) {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  }
+  grid-template-columns: 1fr;
+  max-width: 1000px;
+  width: 100%;
+  justify-self: end;
+  grid-gap: $indent-small;
+
 
   &__title {
     margin-bottom: $indent-small;
@@ -17,10 +17,6 @@
   }
 
   &__subtitle{
-    margin-top: $indent-paragraph;
-
-    @media ($media-mobile) {
-      margin-top: $indent-paragraph/2;
-    }
+    font-size: 18px;
   }
 }
