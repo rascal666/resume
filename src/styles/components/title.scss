@@ -11,12 +11,12 @@
   font-size: $size-subtitle;
   font-family: B612Mono;
   
-  @media ($media-tablet) {
+  @media (max-width: 880px) {
     margin-bottom: $indent-block / 2;
     text-align: left !important;
     font-size: $size-heading-mobile;
   }
-  @media ($media-mobile) {
+  @media (max-width: 680px) {
     margin-bottom: $indent-small;
   }
 }

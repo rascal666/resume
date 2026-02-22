@@ -15,7 +15,7 @@
 
   &__subtitle{
     margin-top: $indent-medium;
-    @media ($media-desc) {
+    @media (max-width:1550px) {
       margin-top: $indent-small;
     }
   }
@@ -28,14 +28,14 @@
     top: -59px;
     z-index: 0;
 
-    @media ($media-desc) {
+    @media (max-width:1550px) {
       max-width: 617px;
       top: 0px;
     }
-    @media ($media-tablet) {
+    @media (max-width: 880px) {
       max-width: 340px;
     }
-    @media ($media-mobile) {
+    @media (max-width: 680px) {
       max-width: 270px;
       top: 90px;
     }
