@@ -31,10 +31,10 @@ $media-mobile: (max-width: 680px);
   margin: auto;
   padding: 0 $indent-medium;
 
-  @media ($media-tablet) {
+  @media (max-width: 880px) {
     padding: 0 $indent-small;
   }
-  @media ($media-mobile) {
+  @media (max-width: 680px) {
     padding: 0 $indent-paragraph;
   }
 }

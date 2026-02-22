@@ -9,7 +9,7 @@
     grid-template-columns: auto 1fr;
     grid-gap: $indent-small;
 
-    @media ($media-tablet) {
+    @media (max-width: 880px) {
       grid-gap: $indent-small/3;
     }
   }
@@ -22,7 +22,7 @@
     position: relative;
     overflow: hidden;
 
-    @media ($media-tablet) {
+    @media (max-width: 880px) {
       width: 70px;
       height: 16px;
     }

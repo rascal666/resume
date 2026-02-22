@@ -6,7 +6,7 @@
   grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
   grid-gap: $indent-medium;
  
-  @media ($media-tablet) {
+  @media (max-width: 880px) {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
 
@@ -19,7 +19,7 @@
   &__subtitle{
     margin-top: $indent-paragraph;
 
-    @media ($media-mobile) {
+    @media (max-width: 680px) {
       margin-top: $indent-paragraph/2;
     }
   }
