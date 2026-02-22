@@ -44,8 +44,8 @@ const skillParams = [
         percent: 50,
     },
     {
-        title: 'tailwind',
-        percent: 50,
+        title: 'tailwind 4',
+        percent: 80,
     }
 ]
 const Skills = () => {
